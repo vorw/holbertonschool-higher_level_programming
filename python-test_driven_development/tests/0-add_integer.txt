@@ -9,13 +9,15 @@
 98
 >>> add_integer(4, "School")
 Traceback (most recent call last):
-    ...
 TypeError: b must be an integer
 >>> add_integer(None)
 Traceback (most recent call last):
-    ...
 TypeError: a must be an integer
->>> add_integer(1e308, 1e308)
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1e1000, 1)
 Traceback (most recent call last):
-    ...
-OverflowError: int too large to convert to float
+OverflowError: cannot convert float infinity to integer
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(float('nan'), 1)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
