@@ -5,6 +5,7 @@ Module that contains the function add_integer.
 This function adds two numbers after verifying their types.
 """
 
+
 def add_integer(a, b=98):
     """
     Adds two integers.
