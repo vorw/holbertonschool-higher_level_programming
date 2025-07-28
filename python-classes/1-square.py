@@ -11,4 +11,4 @@ class Square:
         """
         object for size
         """
-        self.__size
+        self.__size = size
