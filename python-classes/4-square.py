@@ -7,7 +7,6 @@ module for square
 class Square:
     """ class for square"""
 
-
     def __init__(self, size=0):
         """object for size"""
         self.size = size
