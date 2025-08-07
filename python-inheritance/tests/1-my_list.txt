@@ -13,3 +13,6 @@
 >>> my_list.append(-1)
 >>> print(my_list)
 [1, 2, -1]
+>>> my_list.print_sorted()
+>>> print(my_list)
+[-1, 1, 2]
