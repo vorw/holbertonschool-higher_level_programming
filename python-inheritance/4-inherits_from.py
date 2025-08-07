@@ -5,6 +5,6 @@
 def inherits_from(obj, a_class):
     """checker"""
     if isinstance(obj, a_class) and type(obj) is not a_class:
-        return False
-    else:
         return True
+    else:
+        return False
