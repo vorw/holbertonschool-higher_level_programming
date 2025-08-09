@@ -52,7 +52,7 @@ class Rectangle(Shape):
         """perim"""
         return 2 * (self.width + self.height)
 
-def shape_info(obj):
+def shape_info(shape):
     """duck typing"""
-    print("Area: {}".format(obj.area())
-    print("Perimeter: {}".format(obj.perimeter())
+    print("Area: {}".format(shape.area()))
+    print("Perimeter: {}".format(shape.perimeter()))
