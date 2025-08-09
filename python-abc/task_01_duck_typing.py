@@ -56,3 +56,9 @@ def shape_info(shape):
     """duck typing"""
     print("Area: {}".format(shape.area())
     print("Perimeter: {}".format(shape.perimeter())
+
+circle = Circle(2)
+rectangle = Rectangle(4, 6)
+
+shape_info(circle)
+shape_info(rectangle)
