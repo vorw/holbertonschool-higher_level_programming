@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""module for rectangle"""
+"""
+module for rectangle
+"""
 
 
 class Rectangle(BaseGeometry):
