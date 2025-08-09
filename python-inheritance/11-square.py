@@ -21,4 +21,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """custom str"""
-        return "[Square] {}/{}".format(self.__size)
+        return "[Square] {}/{}".format(self.__size, self.__size)
