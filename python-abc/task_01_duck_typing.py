@@ -30,11 +30,11 @@ class Circle(Shape):
 
     def area(self):
         """area"""
-        return pi * self.radius ** 2
+        return (pi * self.radius ** 2)
 
     def perimeter(self):
         """perim"""
-        return 2 * pi * self.radius
+        return (2 * pi * self.radius)
 
 class Rectangle(Shape):
     """rect class"""
@@ -46,11 +46,11 @@ class Rectangle(Shape):
 
     def area(self):
         """area"""
-        return self.width * self.height 
+        return (self.width * self.height) 
     
     def perimeter(self):
         """perim"""
-        return 2 * (self.width + self.height)
+        return (2 * (self.width + self.height))
 
 def shape_info(shape):
     """duck typing"""
