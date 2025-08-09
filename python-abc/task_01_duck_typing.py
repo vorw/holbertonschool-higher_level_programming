@@ -19,9 +19,9 @@ class Shape(ABC):
 class Circle(Shape):
     """circle class"""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """radius"""
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """area"""
@@ -34,7 +34,7 @@ class Circle(Shape):
 class Rectangle(Shape):
     """rect class"""
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """radius"""
         self.width = width
         self.height = height
