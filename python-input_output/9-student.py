@@ -15,4 +15,4 @@ class Student:
 
     def to_json(self):
         """dict"""
-        self.__dict__
+        return self.__dict__
