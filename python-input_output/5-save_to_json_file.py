@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+"""
+writing obj using json
+"""
+
+
+import json
+
+
+def save_to_json_file(my_obj, filename):
+   """main func"""
+   with open(filename, "w", end="") as f:
+      json.dump(my_obj, f)
