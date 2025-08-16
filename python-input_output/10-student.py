@@ -13,6 +13,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
+        """attrs checker"""
         if attrs is None:
             return self.__dict__
         else:
