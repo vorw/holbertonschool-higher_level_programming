@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 from flask import Flask, jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_httpauth import HTTPBasicAuth
@@ -9,9 +8,8 @@ from flask_jwt_extended import (
     get_jwt_identity
 )
 
-
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "strong-pass"
+app.config["JWT_SECRET_KEY"] = "strong-pass"
 
 users = {
     "user1": {"username": "user1", "password": generate_password_hash("password"), "role": "user"},
@@ -26,9 +24,9 @@ def verify_password(username, password):
     user = users.get(username)
     if not user:
         return None
-    elif check_password_hash(user["password"], password):
+    if check_password_hash(user["password"], password):
         return user
-    else None
+    return None
 
 @auth.error_handler
 def basic_auth_error(status):
@@ -41,15 +39,15 @@ def basic_protected():
 
 @app.route("/login", methods=["POST"])
 def login():
-    payload = request.get_json(silent=True) or {}
-    username = payload.get("username")
-    password = payload.get("password")
+    content = request.get_json(silent=True) or {}
+    username = content.get("username")
+    password = content.get("password")
     if not username or not password:
         return jsonify({"error": "Missing credentials"}), 401
-    u = users.get(username)
-    if not u or not check_password_hash(u["password"], password):
+    user = users.get(username)
+    if not user or not check_password_hash(user["password"], password):
         return jsonify({"error": "Invalid credentials"}), 401
-    token = create_access_token(identity=username, additional_claims={"role": u["role"]})
+    token = create_access_token(identity=username, additional_claims={"role": user["role"]})
     return jsonify({"access_token": token})
 
 @app.route("/jwt-protected")
