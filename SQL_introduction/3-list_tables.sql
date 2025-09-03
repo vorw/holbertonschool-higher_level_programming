@@ -1,2 +1,2 @@
 -- list all tables
-SHOW TABLE FROM mysql;
+SHOW TABLES FROM mysql;
