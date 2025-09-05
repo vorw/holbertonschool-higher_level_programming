@@ -1,2 +1,2 @@
--- list rows
-SHOW ROWS FROM first_table;
+-- list row
+SHOW * FROM first_table;
