@@ -1,2 +1,2 @@
 -- table description
-SHOW COLUMNS FROM hbtn_0c_0.first_table;
+SHOW TABLE first_table;
