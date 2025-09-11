@@ -14,7 +14,7 @@ database = MySQLdb.connect(
         port=3306)
 
 cursor = database.cursor()
-cursor.execute("SELECT * FROM states ORDER BY id;")
+cursor.execute("SELECT * FROM states ORDER BY id ASC")
 output = cursor.fetchall()
 for rows in output:
     print(rows)
