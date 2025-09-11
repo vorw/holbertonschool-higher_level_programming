@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""lists all states"""
 
 
 import MySQLdb
 from sys import argv
+
+
 database = MySQLdb.connect(
         username=argv[1]
         password=argv[2]
