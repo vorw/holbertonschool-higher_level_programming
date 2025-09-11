@@ -7,6 +7,7 @@ lists all states
 import MySQLdb
 from sys import argv
 
+
 if __name__ == "__main__":
     database = MySQLdb.connect(
             username=argv[1]
