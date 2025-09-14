@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-lists all states where name matches the user argument
+Filter states by user input
 """
 
 import MySQLdb
