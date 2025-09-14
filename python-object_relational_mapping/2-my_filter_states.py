@@ -3,8 +3,10 @@
 Filter states by user input
 """
 
+
 import MySQLdb
 from sys import argv
+
 
 if __name__ == "__main__":
     database = MySQLdb.connect(
